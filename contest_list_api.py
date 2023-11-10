@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[10]:
+# In[6]:
 
 
 import json
@@ -40,7 +40,7 @@ class Contest:
                         seconds = int(a[0]) * 60 * 60 + int(a[1]) * 60
                         detail={
                             "site":"AtCoder",
-                            "name":contest_detail[1].text,
+                            "name":contest_detail[1].text.split("\n")[3],
                             "url":"https://atcoder.jp"+contest_detail[1].find_all('a')[0]['href'],
                             "start_time":contest_detail[0].text,
                             "duration":str(seconds)
@@ -60,7 +60,7 @@ class Contest:
                         seconds = int(a[0]) * 60 * 60 + int(a[1]) * 60
                         detail={
                             "site":"AtCoder",
-                            "name":contest_detail[1].text,
+                            "name":contest_detail[1].text.split("\n")[3],
                             "url":"https://atcoder.jp"+contest_detail[1].find_all('a')[0]['href'],
                             "start_time":contest_detail[0].text,
                             "duration":str(seconds)
@@ -150,6 +150,42 @@ class Contest:
 if __name__ == '__main__':
     contest=Contest()
     print(contest.contest_list())
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:
